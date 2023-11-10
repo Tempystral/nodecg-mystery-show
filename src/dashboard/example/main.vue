@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ExampleType } from '@nodecg-vue-ts-template/types';
-import { Configschema, ExampleReplicant } from '@nodecg-vue-ts-template/types/schemas';
+import { ExampleType } from '@nodecg-mystery-show/types';
+import { Configschema, ExampleReplicant } from '@nodecg-mystery-show/types/schemas';
 import { useHead } from '@vueuse/head';
 import { useReplicant } from 'nodecg-vue-composable';
 import { ref } from 'vue';
@@ -14,7 +14,7 @@ useHead({ title: 'example' });
 // For more information see https://github.com/Dan-Shields/nodecg-vue-composable
 const exampleReplicant = useReplicant<ExampleReplicant>(
   'exampleReplicant',
-  'nodecg-vue-ts-template',
+  'nodecg-mystery-show',
 );
 
 // Access the bundle configuration with types.

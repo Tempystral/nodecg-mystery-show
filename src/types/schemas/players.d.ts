@@ -5,6 +5,13 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export interface ExampleReplicant {
-	exampleProperty: string;
+export type Players = Player[];
+
+/**
+ * A player containing a name, pronouns, and a score
+ */
+export interface Player {
+	name: string;
+	pronouns?: string;
+	score: number;
 }
