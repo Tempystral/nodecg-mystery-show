@@ -5,8 +5,6 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export type Teams = Team[];
-
 /**
  * A team of players
  */

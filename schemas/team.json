@@ -1,34 +1,24 @@
 {
   "$schema": "https://json-schema.org/draft-07/schema#",
-  "type": "array",
-  "items": {
-    "oneOf": [
-      {
-        "$ref": "#/definitions/team"
+  "description": "A team of players",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "players": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/definitions/player"
+          }
+        ]
       }
-    ]
+    }
   },
   "definitions": {
-    "team": {
-      "description": "A team of players",
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "players": {
-          "type": "array",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/player"
-              }
-            ]
-          }
-        }
-      }
-    },
     "player": {
       "description": "A player containing a name, pronouns, and a score",
       "type": "object",
