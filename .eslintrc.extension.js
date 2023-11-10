@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
   root: true,
   env: {
@@ -7,7 +5,7 @@ module.exports = {
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: path.join(__dirname, 'tsconfig.extension.json'),
+    project: 'tsconfig.extension.json',
   },
   plugins: [
     '@typescript-eslint',
@@ -23,7 +21,7 @@ module.exports = {
     'import/resolver': {
       typescript: {
         // This is needed to properly resolve paths.
-        project: path.join(__dirname, 'tsconfig.extension.json'),
+        project: 'tsconfig.extension.json',
       },
     },
     'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],

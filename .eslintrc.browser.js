@@ -1,14 +1,15 @@
-const path = require('path');
-
 module.exports = {
   root: true,
   env: {
     node: true,
+    browser: true,
+    es2021: true,
+    // 'vue/setup-compiler-macros': true,
   },
   parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser',
-    project: path.join(__dirname, 'tsconfig.browser.json'),
+    project: 'tsconfig.browser.json',
     extraFileExtensions: ['.vue'],
   },
   globals: {
@@ -30,7 +31,7 @@ module.exports = {
     'import/resolver': {
       typescript: {
         // This is needed to properly resolve paths.
-        project: path.join(__dirname, 'tsconfig.browser.json'),
+        project: 'tsconfig.browser.json',
       },
     },
     'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
@@ -39,7 +40,7 @@ module.exports = {
     // Everything is compiled for the browser so dev dependencies are fine.
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     // max-len set to ignore "import" lines (as they usually get long and messy).
-    'max-len': ['error', { code: 100, ignorePattern: '^import\\s.+\\sfrom\\s.+;' }],
+    'max-len': "off", //['error', { code: 100, ignorePattern: '^import\\s.+\\sfrom\\s.+;' }],
     // I mainly have this off as it ruins auto import sorting in VSCode.
     'object-curly-newline': 'off',
     // Allows "main.vue" files to be named as such.
@@ -51,5 +52,11 @@ module.exports = {
       ts: 'never',
       tsx: 'never',
     }],
+
+    "no-fallthrough": "off",
+    "prefer-const": "error",
+    "no-mixed-spaces-and-tabs": "off",
+    "no-unused-vars": "off",
+    "no-multiple-empty-lines": "off"
   }
 };
