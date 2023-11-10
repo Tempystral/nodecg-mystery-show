@@ -1,3 +1,3 @@
 /* eslint-disable */
 // @ts-ignore
-export * from './players';
+export * from './teams';
